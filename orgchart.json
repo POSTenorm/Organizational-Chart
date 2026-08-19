@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1784327421953,
+  "updatedAt": 1787165502753,
   "categories": [
     {
       "id": "exec",
@@ -978,11 +978,11 @@
     },
     {
       "id": "p77",
-      "first": "TBD",
-      "last": "",
+      "first": "Lexi",
+      "last": "Monroe",
       "title": "Systems Operations Manager",
       "manager": "p75",
-      "open": true,
+      "open": false,
       "note": "",
       "cats": [],
       "marks": [],
