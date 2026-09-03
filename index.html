@@ -10,6 +10,7 @@
     --blue1:#8DC8E8; --blue2:#007DBA; --blue3:#00558C; --blue4:#002B49;
     --sand:#ECD6AF; --lupine:#5B4084; --poppy:#EE811B; --matilija:#F2B231;
     --ink:#002B49; --ink-soft:#4a5b6b; --line:#c3d3de; --paper:#ffffff; --bg:#f4f8fb;
+    --conn:#c3d3de; --conn-w:2px;
     --hit:#F2B231;
     --head:"Figtree",Arial,Helvetica,sans-serif;
     --body:"Lora",Georgia,serif;
@@ -88,10 +89,10 @@
 
   .tree, .tree ul{list-style:none;margin:0;padding:0}
   .tree ul{display:flex;justify-content:center;position:relative;padding-top:26px}
-  .tree ul::before{content:'';position:absolute;top:0;left:50%;border-left:2px solid var(--line);height:26px}
+  .tree ul::before{content:'';position:absolute;top:0;left:50%;border-left:var(--conn-w) solid var(--conn);height:26px}
   .tree li{display:flex;flex-direction:column;align-items:center;position:relative;padding:26px 7px 0}
-  .tree li::before{content:'';position:absolute;top:0;right:50%;width:50%;height:26px;border-top:2px solid var(--line)}
-  .tree li::after{content:'';position:absolute;top:0;left:50%;width:50%;height:26px;border-top:2px solid var(--line);border-left:2px solid var(--line)}
+  .tree li::before{content:'';position:absolute;top:0;right:50%;width:50%;height:26px;border-top:var(--conn-w) solid var(--conn)}
+  .tree li::after{content:'';position:absolute;top:0;left:50%;width:50%;height:26px;border-top:var(--conn-w) solid var(--conn);border-left:var(--conn-w) solid var(--conn)}
   .tree li:first-child::before{border-top:none}
   .tree li:last-child::after{border-top:none}
   .tree > li{padding-top:0}
@@ -101,18 +102,18 @@
   .tree ul.stack{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding-top:0;margin:0;position:relative}
   .tree ul.stack::before{display:none;content:none}
   /* hook: spine branches off from beneath the manager's plate, then runs down the left */
-  .tree ul.stack::after{content:'';position:absolute;left:0;top:-28px;width:50%;height:28px;border:none;border-left:2px solid var(--line);border-top:2px solid var(--line);border-top-left-radius:12px;pointer-events:none}
+  .tree ul.stack::after{content:'';position:absolute;left:0;top:-28px;width:50%;height:28px;border:none;border-left:var(--conn-w) solid var(--conn);border-top:var(--conn-w) solid var(--conn);border-top-left-radius:12px;pointer-events:none}
   /* every plate in a stacked column: left spine with a rounded elbow into the plate */
   .tree ul.stack > li{display:flex;flex-direction:column;align-items:flex-start;padding:14px 0 0 26px;position:relative}
-  .tree ul.stack > li::before{content:'';position:absolute;left:0;top:-2px;width:26px;height:48px;border:none;border-left:2px solid var(--line);border-bottom:2px solid var(--line);border-bottom-left-radius:12px;right:auto}
-  .tree ul.stack > li::after{content:'';display:block;position:absolute;left:0;top:0;bottom:0;width:0;height:auto;border:none;border-left:2px solid var(--line)}
+  .tree ul.stack > li::before{content:'';position:absolute;left:0;top:-2px;width:26px;height:48px;border:none;border-left:var(--conn-w) solid var(--conn);border-bottom:var(--conn-w) solid var(--conn);border-bottom-left-radius:12px;right:auto}
+  .tree ul.stack > li::after{content:'';display:block;position:absolute;left:0;top:0;bottom:0;width:0;height:auto;border:none;border-left:var(--conn-w) solid var(--conn)}
   .tree ul.stack > li:last-child::after{display:none}
   /* assistant plates beside their manager */
   .platewrap{position:relative;display:inline-block}
   .sidebox{position:absolute;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:2}
   .sidebox.sideL{right:calc(100% + 30px)}
   .sidebox.sideR{left:calc(100% + 30px)}
-  .sidebox .plate::after{content:'';position:absolute;top:50%;width:30px;height:0;border-top:2px solid var(--line)}
+  .sidebox .plate::after{content:'';position:absolute;top:50%;width:30px;height:0;border-top:var(--conn-w) solid var(--conn)}
   .sidebox.sideL .plate::after{left:100%}
   .sidebox.sideR .plate::after{right:100%}
 
@@ -184,12 +185,12 @@
     .search input{width:100%;min-width:180px}
     .titleblock .t{font-size:1.05rem}
     .viewport{max-height:none}
-    .tree ul{display:block;padding:0 0 0 14px;margin-left:12px;border-left:2px solid var(--line)}
+    .tree ul{display:block;padding:0 0 0 14px;margin-left:12px;border-left:var(--conn-w) solid var(--conn)}
     .tree ul::before{display:none}
     .tree li{display:block;padding:12px 0 0}
     .tree li::before,.tree li::after{display:none}
     .tree li > .plate,.tree > li > .plate{width:100%;text-align:left;padding-left:14px}
-    .tree ul.stack{display:block;padding:0 0 0 14px;margin:8px 0 0 12px;border-left:2px solid var(--line);align-items:stretch}
+    .tree ul.stack{display:block;padding:0 0 0 14px;margin:8px 0 0 12px;border-left:var(--conn-w) solid var(--conn);align-items:stretch}
     .tree ul.stack::before{display:none}
     .tree ul.stack > li{display:block;padding:12px 0 0;align-items:stretch}
     .tree ul.stack > li::before{display:none}
@@ -285,6 +286,21 @@
           <div class="hint">Each marker shows as a colored dot on the plate. Add as many as you need (Welcoming Group, ERGs, and so on) and assign them per person.</div>
           <div class="mgr-list" id="markList"></div>
           <button class="btn btn-line" id="addMarkBtn">+ Add marker</button>
+        </div>
+        <div class="mgr-box">
+          <h3>Connector lines</h3>
+          <div class="hint">Color and thickness of the lines linking name plates. Changes preview instantly and reach staff when you publish.</div>
+          <div class="mgr-item">
+            <input id="connColor" type="color" value="#c3d3de" title="Line color">
+            <select id="connWidth" title="Line weight">
+              <option value="1">1 px &mdash; hairline</option>
+              <option value="2" selected>2 px &mdash; standard</option>
+              <option value="3">3 px &mdash; medium</option>
+              <option value="4">4 px &mdash; bold</option>
+              <option value="5">5 px &mdash; heavy</option>
+            </select>
+            <button class="btn btn-line" id="connReset" style="padding:6px 12px;font-size:.76rem">Reset</button>
+          </div>
         </div>
       </div>
     </div>
@@ -428,6 +444,7 @@
     ];
     return {
       version:1, updatedAt:Date.now(),
+      style:{connColor:"#c3d3de",connWidth:2},
       categories:[{id:"exec",name:"Executive Team",color:"#007DBA",style:"outline"}],
       markers:[{id:"ic",name:"Inclusion Council",color:"#5B4084"},{id:"sc",name:"Social Committee - Serving July 2026-July 2027",color:"#EE811B"}],
       people:pp
@@ -445,6 +462,10 @@
   function isDesc(a,b){return descendants(b).indexOf(a)>-1;}
   function staffCount(){return state.people.filter(function(p){return !p.open && !/intern/i.test(p.title);}).length;}
   function openCount(){return state.people.filter(function(p){return p.open;}).length;}
+
+  function connStyle(){if(!state.style)state.style={connColor:"#c3d3de",connWidth:2};if(!state.style.connColor)state.style.connColor="#c3d3de";if(!state.style.connWidth)state.style.connWidth=2;return state.style;}
+  function applyConnStyle(){var s=connStyle();var r=document.getElementById("oc-app");r.style.setProperty("--conn",s.connColor);r.style.setProperty("--conn-w",s.connWidth+"px");}
+  function syncConnControls(){var s=connStyle();$("connColor").value=s.connColor;$("connWidth").value=String(s.connWidth);}
 
   function showStoreBanner(){if(!hasStore){var b=$("storeBanner");b.style.display="block";b.textContent="Preview mode: shared saving isn't available here, so edits won't reach staff. On your GitHub-hosted copy, use Download orgchart.json to publish changes.";}}
   async function loadState(){if(hasStore){try{var r=await window.storage.get(KEY,true);if(r&&r.value)return JSON.parse(r.value);}catch(e){}}return null;}
@@ -879,7 +900,7 @@
     }
   }
 
-  function renderAll(){renderMeta();renderLegend();renderChart();if(isAdmin){renderCatList();renderMarkList();}}
+  function renderAll(){applyConnStyle();renderMeta();renderLegend();renderChart();if(isAdmin){renderCatList();renderMarkList();syncConnControls();}}
 
   // ---------- wiring ----------
   function wire(){
@@ -911,6 +932,10 @@
     $("addPersonBtn").addEventListener("click",addPerson);
     $("addCatBtn").addEventListener("click",function(){state.categories.push({id:"c"+(seq++),name:"New category",color:"#007DBA",style:"outline"});saveState();renderCatList();renderLegend();});
     $("addMarkBtn").addEventListener("click",function(){state.markers.push({id:"m"+(seq++),name:"New group",color:"#F2B231"});saveState();renderMarkList();renderLegend();});
+
+    $("connColor").addEventListener("input",function(e){connStyle().connColor=e.target.value;applyConnStyle();saveSoon();});
+    $("connWidth").addEventListener("change",function(e){connStyle().connWidth=parseInt(e.target.value,10)||2;applyConnStyle();saveSoon();requestAnimationFrame(drawDotted);});
+    $("connReset").addEventListener("click",function(){state.style={connColor:"#c3d3de",connWidth:2};applyConnStyle();syncConnControls();saveState("Connector lines reset");requestAnimationFrame(drawDotted);});
 
     $("inspClose").addEventListener("click",closeInspector);
     $("inspDone").addEventListener("click",closeInspector);
