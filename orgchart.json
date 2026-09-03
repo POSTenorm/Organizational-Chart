@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1788457672613,
+  "updatedAt": 1788464108200,
   "categories": [
     {
       "id": "exec",
@@ -13,17 +13,17 @@
     {
       "id": "ic",
       "name": "Inclusion Council",
-      "color": "#00fdff"
+      "color": "#76d6ff"
     },
     {
       "id": "sc",
       "name": "Social Committee",
-      "color": "#ff40ff"
+      "color": "#d783ff"
     },
     {
       "id": "m1000",
       "name": "Employee Resource Group Chair",
-      "color": "#00f900"
+      "color": "#73fa79"
     }
   ],
   "people": [
@@ -1054,7 +1054,7 @@
     }
   ],
   "style": {
-    "connColor": "#000000",
+    "connColor": "#005493",
     "connWidth": 2
   }
 }
