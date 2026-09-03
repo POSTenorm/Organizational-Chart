@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1788464181461,
+  "updatedAt": 1788464831666,
   "categories": [
     {
       "id": "exec",
@@ -1054,7 +1054,7 @@
     }
   ],
   "style": {
-    "connColor": "#005493",
+    "connColor": "#005790",
     "connWidth": 2
   }
 }
