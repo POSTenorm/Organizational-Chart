@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updatedAt": 1787165502753,
+  "updatedAt": 1788457672613,
   "categories": [
     {
       "id": "exec",
       "name": "Executive Team",
-      "color": "#007DBA",
+      "color": "#0061ff",
       "style": "fill"
     }
   ],
@@ -13,12 +13,17 @@
     {
       "id": "ic",
       "name": "Inclusion Council",
-      "color": "#9929bd"
+      "color": "#00fdff"
     },
     {
       "id": "sc",
       "name": "Social Committee",
-      "color": "#EE811B"
+      "color": "#ff40ff"
+    },
+    {
+      "id": "m1000",
+      "name": "Employee Resource Group Chair",
+      "color": "#00f900"
     }
   ],
   "people": [
@@ -99,7 +104,9 @@
       "open": false,
       "note": "",
       "cats": [],
-      "marks": [],
+      "marks": [
+        "m1000"
+      ],
       "dotted": []
     },
     {
@@ -365,7 +372,9 @@
       "open": false,
       "note": "",
       "cats": [],
-      "marks": [],
+      "marks": [
+        "m1000"
+      ],
       "dotted": []
     },
     {
@@ -455,7 +464,9 @@
       "open": false,
       "note": "Dotted line to CFO",
       "cats": [],
-      "marks": [],
+      "marks": [
+        "m1000"
+      ],
       "dotted": [
         "p74"
       ]
@@ -475,7 +486,7 @@
     {
       "id": "p37",
       "first": "Payton",
-      "last": "Hammer",
+      "last": "O'Hammer",
       "title": "Land Transactions Project Manager",
       "manager": "p36",
       "open": false,
@@ -500,12 +511,12 @@
     },
     {
       "id": "p39",
-      "first": "Ennie",
+      "first": "Toluwalase \"Ennie\"",
       "last": "Akinwunmi",
       "title": "Land Transactions Associate",
       "manager": "p36",
       "open": false,
-      "note": "Starts 7.15.26",
+      "note": "",
       "cats": [],
       "marks": [],
       "dotted": []
@@ -609,7 +620,9 @@
       "open": false,
       "note": "",
       "cats": [],
-      "marks": [],
+      "marks": [
+        "m1000"
+      ],
       "dotted": []
     },
     {
@@ -674,8 +687,8 @@
     },
     {
       "id": "p53",
-      "first": "Elizabeth",
-      "last": "Elizabeth Luck",
+      "first": "Elizabeth \"Liz\"",
+      "last": "Luck",
       "title": "Conservation Easement Stewardship Intern",
       "manager": "p46",
       "open": false,
@@ -716,7 +729,7 @@
       "title": "Stewardship Project Manager",
       "manager": "p55",
       "open": false,
-      "note": "Starts 8.5.26",
+      "note": "",
       "cats": [],
       "marks": [],
       "dotted": []
@@ -802,18 +815,6 @@
       "last": "Robinson",
       "title": "Senior GIS Analyst",
       "manager": "p62",
-      "open": false,
-      "note": "",
-      "cats": [],
-      "marks": [],
-      "dotted": []
-    },
-    {
-      "id": "p64",
-      "first": "Lucy",
-      "last": "Bennett",
-      "title": "Conservation Planning Fellow",
-      "manager": "p61",
       "open": false,
       "note": "",
       "cats": [],
@@ -978,7 +979,7 @@
     },
     {
       "id": "p77",
-      "first": "Lexi",
+      "first": "Alexandra \"Lexi\"",
       "last": "Monroe",
       "title": "Systems Operations Manager",
       "manager": "p75",
@@ -1038,6 +1039,22 @@
       "marks": [],
       "dotted": [],
       "side": "right"
+    },
+    {
+      "id": "n1001mtltbjuw",
+      "first": "Lucy",
+      "last": "Bennett",
+      "title": "Conservation Planning Fellow",
+      "manager": "p61",
+      "open": false,
+      "note": "",
+      "cats": [],
+      "marks": [],
+      "dotted": []
     }
-  ]
+  ],
+  "style": {
+    "connColor": "#000000",
+    "connWidth": 2
+  }
 }
