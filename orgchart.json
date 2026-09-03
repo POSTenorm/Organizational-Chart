@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updatedAt": 1788464108200,
+  "updatedAt": 1788464181461,
   "categories": [
     {
       "id": "exec",
       "name": "Executive Team",
-      "color": "#0061ff",
+      "color": "#005493",
       "style": "fill"
     }
   ],
